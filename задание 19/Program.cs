@@ -9,20 +9,15 @@ namespace задание_19
         static void Main(string[] args)
         {
             Console.Write("Введите коэффициент a: ");
-            double a = Convert.ToDouble(Console.ReadLine());
+            double a = double.Parse(Console.ReadLine());
             Console.Write("Введите коэффициент b: ");
             double b = Convert.ToDouble(Console.ReadLine());
             Console.Write("Введите коэффициент c: ");
             double c = Convert.ToDouble(Console.ReadLine());
             Console.Write("Введите значение e: ");
             double e = Convert.ToDouble(Console.ReadLine());
-            c = c - e;
-            if (a == 0)
-            {
-                Console.WriteLine("Ошибка: коэффициент a не должен быть равен 0.");
-                return;
-            }
-            double D = b * b - 4 * a * c;
+
+            double D = Math.Pow(b, e) - 4 * a * c;
             if (D > 0) 
             {
                 double x1 = (-b + Math.Sqrt(D)) / (2 * a);
